@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>BDG Predictor Login</title>
+  <style>
+    body {font-family: Arial; margin: 40px;}
+    input, button {padding: 8px; font-size: 1rem;}
+    #result {margin-top: 20px; font-weight: bold;}
+  </style>
+</head>
+<body>
+  <h2>BDG Predictor Login</h2>
+  <input id="id" placeholder="e-mail / phone" />
+  <button onclick="go()">Login</button>
+  <div id="result"></div>
+
+  <script>
+    function go() {
+      const v = document.getElementById('id').value.trim();
+      if (!v) return alert('Enter something');
+      document.getElementById('result').innerText = 'Captured: ' + v;
+    }
+  </script>
+</body>
+</html>
